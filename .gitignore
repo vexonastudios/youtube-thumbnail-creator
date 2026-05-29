@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# ThumbGen — local settings (contains API keys)
+.thumbgen-settings.json
