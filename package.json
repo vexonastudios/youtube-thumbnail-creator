@@ -1,7 +1,7 @@
 {
-  "name": "thumbgen",
+  "name": "sermonthumb",
   "version": "1.0.0",
-  "description": "AI-powered YouTube thumbnail creator by Vexona Studios",
+  "description": "AI-powered sermon thumbnail maker for churches by Vexona Studios",
   "private": true,
   "main": "electron/main.js",
   "scripts": {
@@ -15,8 +15,8 @@
     "release": "next build && electron-builder --publish always"
   },
   "build": {
-    "appId": "com.vexonastudios.thumbgen",
-    "productName": "ThumbGen",
+    "appId": "com.vexonastudios.sermonthumb",
+    "productName": "SermonThumb",
     "copyright": "Copyright © 2025 Vexona Studios",
     "directories": {
       "output": "dist"
@@ -57,13 +57,13 @@
     "nsis": {
       "oneClick": false,
       "allowToChangeInstallationDirectory": true,
-      "shortcutName": "ThumbGen"
+      "shortcutName": "SermonThumb"
     },
     "publish": [
       {
         "provider": "github",
         "owner": "vexonastudios",
-        "repo": "youtube-thumbnail-creator",
+        "repo": "sermon-thumbnail-maker",
         "releaseType": "release"
       }
     ]

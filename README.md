@@ -1,8 +1,12 @@
-# ThumbGen — YouTube Thumbnail Generator Setup
+# SermonThumb — Sermon Thumbnail Maker for Churches
 
 > ⚠️ **After every fresh `git clone` or `git pull` on a new machine:**
 > `.env.local` and `.thumbgen-settings.json` are **gitignored** — they are never in GitHub.
 > You must re-fill `.env.local` with your API keys (see Step 4 below) before the app will work.
+
+**SermonThumb** is a desktop app built specifically for churches to quickly create polished, professional YouTube thumbnails for their sermon uploads. It pulls your sermon videos directly from YouTube, lets you drop in a photo of the preacher, and uses AI to auto-generate a well-composed, branded thumbnail — ready to upload in seconds.
+
+---
 
 ## Quick Start
 
@@ -50,13 +54,13 @@ npm run electron
 
 ## How It Works
 
-1. **Connect** your YouTube channel via OAuth2
-2. **Dashboard** shows all your videos — missing thumbnails highlighted in amber
-3. **Click "Generate Thumbnail"** on any video
+1. **Connect** your church's YouTube channel via OAuth2
+2. **Dashboard** shows all your sermon videos — missing thumbnails highlighted in amber
+3. **Click "Generate Thumbnail"** on any sermon
 4. **Upload a still** of the preacher (screenshot from the video)
 5. **Gemini analyzes** which direction the face is looking
 6. **Layout is auto-set**: face left → preacher on right, text on left (and vice versa)
-7. **Optionally remove background** via remove.bg
+7. **Optionally remove background** via fal.ai
 8. **Pick a gradient** from 7 presets (Ocean, Royal Blue, Slate, etc.)
 9. **Generate** — sharp composites the final 1280×720 JPEG
 10. **Preview → Upload** directly to YouTube
@@ -66,7 +70,7 @@ npm run electron
 ## Gradient Presets
 
 | Name | Colors | Best For |
-|------|--------|---------|
+|------|--------|---------:|
 | Slate | Dark slate → steel blue | General (Grace Community style) |
 | Ocean | Teal → cyan | Upbeat messages |
 | Royal | Navy → royal blue | Traditional/formal |
