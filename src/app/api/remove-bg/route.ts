@@ -27,7 +27,7 @@ export async function POST(request: NextRequest) {
 
     const resultBuffer = await removeBackgroundFal(imageBuffer, falKey, mimeType);
 
-    return new NextResponse(resultBuffer, {
+    return new NextResponse(new Uint8Array(resultBuffer), {
       headers: {
         "Content-Type": "image/png",
         "Content-Length": resultBuffer.length.toString(),

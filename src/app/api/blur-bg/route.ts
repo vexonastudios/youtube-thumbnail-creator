@@ -53,7 +53,7 @@ export async function POST(request: NextRequest) {
       .jpeg({ quality: 95 })
       .toBuffer();
 
-    return new NextResponse(result, {
+    return new NextResponse(new Uint8Array(result), {
       headers: {
         "Content-Type":   "image/jpeg",
         "Content-Length": result.length.toString(),

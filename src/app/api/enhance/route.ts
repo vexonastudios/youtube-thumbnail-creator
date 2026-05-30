@@ -42,7 +42,7 @@ export async function POST(request: NextRequest) {
       contentType = "image/jpeg";
     }
 
-    return new NextResponse(result, {
+    return new NextResponse(new Uint8Array(result), {
       headers: {
         "Content-Type":   contentType,
         "Content-Length": result.length.toString(),
