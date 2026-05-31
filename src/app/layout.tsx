@@ -12,6 +12,10 @@ export const metadata: Metadata = {
   title: "SermonThumb — Auto YouTube Thumbnail Generator",
   description:
     "Automatically generate professional YouTube thumbnails for church sermons using AI. Connects to YouTube API for one-click upload.",
+  icons: {
+    icon: "/favicon.png",
+    apple: "/favicon.png",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

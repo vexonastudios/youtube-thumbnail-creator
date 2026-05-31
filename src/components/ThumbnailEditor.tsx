@@ -10,7 +10,7 @@ interface Props {
   video: YouTubeVideo;
   logoBase64: string | null;
   onClose: () => void;
-  onUploaded: () => void;
+  onUploaded: (thumbnailBase64?: string) => void;
 }
 
 type Step = "upload" | "crop" | "customize" | "preview" | "done";
@@ -355,7 +355,7 @@ export default function ThumbnailEditor({ video, logoBase64, onClose, onUploaded
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "Upload failed");
       setStep("done");
-      setTimeout(onUploaded, 1500);
+      setTimeout(() => onUploaded(thumbnailBase64), 1500);
     } catch (e) {
       setError(e instanceof Error ? e.message : "Upload failed");
     } finally { setUploading(false); }

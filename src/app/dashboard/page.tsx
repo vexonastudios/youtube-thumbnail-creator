@@ -399,7 +399,7 @@ export default function DashboardPage() {
           video={selectedVideo}
           logoBase64={logoBase64}
           onClose={() => setSelectedVideo(null)}
-          onUploaded={async () => {
+          onUploaded={async (thumbnailBase64?: string) => {
             const id = selectedVideo.id;
             // Mark complete locally + persist
             setCompletedIds(prev => {
@@ -408,6 +408,14 @@ export default function DashboardPage() {
               saveSettings({ completedVideoIds: [...next] }).catch(() => {});
               return next;
             });
+            // Update the video's thumbnail in local state so the card shows the new image
+            if (thumbnailBase64) {
+              setVideos(prev => prev.map(v =>
+                v.id === id
+                  ? { ...v, thumbnailUrl: `data:image/jpeg;base64,${thumbnailBase64}`, hasThumbnail: true }
+                  : v
+              ));
+            }
             setSelectedVideo(null);
           }}
         />

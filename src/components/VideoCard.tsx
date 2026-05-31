@@ -62,11 +62,12 @@ export default function VideoCard({ video, isCompleted, onGenerate, onToggleComp
       {/* Thumbnail Preview */}
       <div
         style={{
-          width: 140,
+          width: 200,
           flexShrink: 0,
           background: "var(--bg-secondary)",
           position: "relative",
           overflow: "hidden",
+          aspectRatio: "16/9",
         }}
       >
         {video.thumbnailUrl ? (

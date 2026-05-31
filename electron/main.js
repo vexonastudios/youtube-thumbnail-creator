@@ -166,6 +166,9 @@ function createWindow() {
     minWidth:  900,
     minHeight: 600,
     title:     "SermonThumb",
+    icon:      IS_PROD
+      ? path.join(process.resourcesPath, "app", ".next", "standalone", "public", "icon.png")
+      : path.join(__dirname, "..", "public", "icon.png"),
     backgroundColor: "#0a0d14",
     webPreferences: {
       nodeIntegration:  false,
